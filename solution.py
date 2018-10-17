@@ -1,13 +1,22 @@
-def piglatin(sentence):
-	sentence = sentence.split()
-	vowels = "aeiouy"
-	for i in range(len(sentence)):
-		if sentence[i][0] in vowels:
-			sentence[i] += 'yay'
-		else:
-			while 
-				
-				sentence[w]=sentence[i][1:]+sentence[i][0]
-			sentence[i]+='ay'
-		sentence = ' '.join(sentence)
-		return sentence
+sentence = input('Please enter message: ') 
+words = sentence.split(" ")
+pig = ""
+vowels = "aeiouy"
+
+for word in words:
+	if word[0] in vowels:
+			word = word + 'yay'
+	else:
+		i = 0
+
+		for letter in word:
+			if letter not in vowels:
+				word = word + letter
+				i += 1 
+			else:
+				break
+		word = word[i:] + "ay "
+
+	pig += word + " "
+		
+print(pig)
